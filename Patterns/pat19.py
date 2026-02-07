@@ -21,7 +21,6 @@ class Solution:
             iniS += 2
         
         # Print the lower half pattern
-        
         # Store the initial spaces.
         iniS = 2 * n - 2
         
