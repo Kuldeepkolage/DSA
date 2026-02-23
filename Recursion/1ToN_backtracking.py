@@ -3,6 +3,5 @@ def f(i,n):
         return
     f(i-1,n)
     print(i)
-
 n=3
 f(n,n)
