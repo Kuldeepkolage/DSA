@@ -3,6 +3,5 @@ def f(n,i):
         return
     print(n)
     f(n-1,i)
-
 n = 5
 f(n,1)
