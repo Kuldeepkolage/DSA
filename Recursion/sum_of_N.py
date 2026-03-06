@@ -3,6 +3,5 @@ def f(i,sum):
         print(sum)
         return
     f(i-1, sum+i)
-
 n = 3
 f(n, 0)
