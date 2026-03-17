@@ -14,4 +14,4 @@ if __name__ == "__main__":
     
     # Find and output the largest element in both arrays
     print("The Largest element in the array is:", sortArr(arr1))
-    print("The Largest element in the array is:", sortArr(arr2))
+    print("The Largest element in the array is:", sortArr(arr2)) 
