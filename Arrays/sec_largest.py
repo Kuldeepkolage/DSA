@@ -1,4 +1,3 @@
-# Function to find the second smallest and second largest elements in the array
 def getElements(arr, n):
     # Edge case: when the array has less than 2 elements
     if n == 0 or n == 1:
@@ -13,8 +12,8 @@ def getElements(arr, n):
 
     # Find the smallest and largest elements in the array
     for i in range(n):
-        small = min(small, arr[i])  # Update the smallest element
-        large = max(large, arr[i])  # Update the largest element
+        small = min(small, arr[i])  
+        large = max(large, arr[i])  
 
     # Find the second smallest and second largest elements
     for i in range(n):
@@ -30,7 +29,6 @@ def getElements(arr, n):
 # Driver code
 if __name__ == "__main__":
     n = 6
-    arr = [1, 2, 4, 6, 7, 5]  # Array of elements
+    arr = [1, 2, 4, 6, 7, 5] 
     
-    # Call the function to find and print the second smallest and second largest elements
     getElements(arr, n)
