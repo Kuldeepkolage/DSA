@@ -1,17 +1,15 @@
 class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
+        if numRows == 0:
+            return []
         if numRows == 1:
             return [[1]]
         
-        triangle = self.generate(numRows - 1)
+        prevRows = self.generate(numRows - 1)
+        newRow = [1] * numRows
         
-        prev_row = triangle[-1]
-        new_row = [1]
+        for i in range(1, numRows - 1):
+            newRow[i] = prevRows[-1][i - 1] + prevRows[-1][i]
         
-        for i in range(1, len(prev_row)):
-            new_row.append(prev_row[i-1] + prev_row[i])
-        
-        new_row.append(1)
-        triangle.append(new_row)
-        
-        return triangle
+        prevRows.append(newRow)
+        return prevRows
