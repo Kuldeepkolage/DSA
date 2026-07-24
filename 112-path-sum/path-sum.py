@@ -4,8 +4,9 @@ class Solution:
             return False
         
         if not root.left and not root.right:
-            return targetSum - root.val == 0
+            return targetSum == root.val
         
-        targetSum -= root.val
+        left_sum = self.hasPathSum(root.left, targetSum - root.val)
+        right_sum = self.hasPathSum(root.right, targetSum - root.val)
         
-        return self.hasPathSum(root.left, targetSum) or self.hasPathSum(root.right, targetSum)
+        return left_sum or right_sum
