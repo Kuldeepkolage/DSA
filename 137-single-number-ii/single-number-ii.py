@@ -4,7 +4,7 @@ class Solution:
         if len(nums) < 2:
             return nums[0]
 
-        nums.sort()
+        nums.sort();
 
         if nums[0] != nums[1]:
             return nums[0]
